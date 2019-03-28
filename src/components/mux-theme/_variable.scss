@@ -1,0 +1,98 @@
+/**
+ * ©Copyright 2018 China Eastern Airlines. All rights reserved
+ * Created by bryan<liubo15@ceair.com> on 2018.10.31
+ */
+/* 公共颜色定义 START*/
+$colorPrimary: #223B61;
+$colorAccent: #CB1E36;
+$colorGold: #C4A347;
+$colorSubject: #BFA456;
+$colorStable: #D8D8D8;
+$colorDark: #444444;
+$colorLight: #FFFFFF;
+$colorCycn: #8CB55C;
+$colorGrey: #999999;
+$colorArrow: #C7C7C7;
+$colorTransparent: unquote('#00000000');
+/* 公共颜色定义 END*/
+
+$colorList: (
+  (
+    name: primary,
+    normalColor: $colorPrimary,
+    activedColor: darken($colorPrimary, 10%),
+    disabledColor: #CBCBCB,
+    contraryColor:$colorLight
+  ),
+  (
+    name: accent,
+    normalColor: $colorAccent,
+    activedColor: darken($colorAccent, 10%),
+    disabledColor: #CBCBCB,
+    contraryColor:$colorLight
+  ),
+  (
+    name: pageGold,
+    normalColor: $colorGold,
+    activedColor: darken($colorGold, 10%),
+    disabledColor: #CBCBCB,
+    contraryColor:$colorLight
+  ),
+  (
+    name: subject,
+    normalColor: $colorSubject,
+    activedColor: darken($colorSubject, 10%),
+    disabledColor: #CBCBCB,
+    contraryColor:$colorLight
+  ),
+  (
+    name: stable,
+    normalColor: $colorStable,
+    activedColor: darken($colorStable, 10%),
+    disabledColor: #CBCBCB,
+    contraryColor:$colorLight
+  ),
+  (
+    name: dark,
+    normalColor: $colorDark,
+    activedColor: darken($colorDark, 10%),
+    disabledColor: #CBCBCB,
+    contraryColor:$colorLight
+  ),
+  (
+    name: light,
+    normalColor: $colorLight,
+    activedColor: darken($colorLight, 10%),
+    disabledColor: #CBCBCB,
+    contraryColor: $colorPrimary
+  ),
+  (
+    name: cycn,
+    normalColor: $colorCycn,
+    activedColor: darken($colorCycn, 10%),
+    disabledColor: #CBCBCB,
+    contraryColor: $colorPrimary
+  ),
+  (
+    name: greyed,
+    normalColor: $colorGrey,
+    activedColor: darken($colorGrey, 10%),
+    disabledColor: #CBCBCB,
+    contraryColor: $colorPrimary
+  ),
+  (
+    name: arrow,
+    normalColor: $colorArrow,
+    activedColor: darken($colorArrow, 10%),
+    disabledColor: #CBCBCB,
+    contraryColor: $colorPrimary
+  ),
+  (
+    name: transparent,
+    normalColor: $colorTransparent,
+    activedColor: $colorTransparent,
+    disabledColor: $colorTransparent,
+    contraryColor:$colorPrimary
+  )
+);
+

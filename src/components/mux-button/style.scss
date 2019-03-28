@@ -1,0 +1,115 @@
+@import "../mux-theme/theme";
+$typeList: (
+  (type: default, normalOpacity: 1, activeOpacity: 0.9),
+  (type: outline, normalOpacity: 1, activeOpacity: 0.8),
+  (type: custom, normalOpacity: 1, activeOpacity: 0.8)
+);
+.mux-button-default {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4wx;
+}
+.mux-button-outline {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4wx;
+  border-width: 1wx;
+  border-style: solid;
+  background-color: $colorTransparent;
+}
+.mux-button-clear {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: $colorTransparent;
+}
+/* 自定义按钮 START */
+.mux-button-custom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4wx;
+  border-width: 1wx;
+  border-style: solid;
+}
+/* 自定义按钮 END */
+.mux-button-large {
+  height: 40wx;
+}
+.mux-button-text-large {
+  font-size: 15wx;
+}
+.mux-button-medium {
+  height: 25wx;
+}
+.mux-button-text-medium {
+  font-size: 12wx;
+}
+/* 按压效果 START */
+@each $item in $typeList {
+  $type: map-get($item, type);
+  $normalOpacity: map-get($item, normalOpacity);
+  $activeOpacity: map-get($item, activeOpacity);
+  .mux-button-#{$type} {
+    opacity: $normalOpacity;
+  }
+  .mux-button-#{$type}-enabled:active {
+    opacity: $activeOpacity;
+  }
+}
+/* 按压效果 END */
+@each $item in $colorList {
+  $name: map-get($item, name);
+  $normalColor: map-get($item, normalColor);
+  $activedColor: map-get($item, activedColor);
+  $disabledColor: map-get($item, disabledColor);
+  $contraryColor: map-get($item, contraryColor);
+  .mux-button-default-#{$name}-enabled {
+    background-color: $normalColor;
+  }
+  // .mux-button-default-#{$name}-enabled:active {
+  //   background-color: $activedColor;
+  // }
+  .mux-button-default-#{$name}-disabled{
+    background-color: $disabledColor;
+  }
+  // .mux-button-default-#{$name}-disabled:active{
+  //   background-color: $disabledColor;
+  // }
+  .mux-button-text-default-#{$name}-enabled {
+    color: $contraryColor;
+  }
+  .mux-button-text-default-#{$name}-disabled {
+    color: $contraryColor;
+  }
+  .mux-button-outline-#{$name}-enabled {
+    border-color: $normalColor;
+  }
+  .mux-button-outline-#{$name}-disabled {
+    border-color: $disabledColor;
+  }
+  .mux-button-text-outline-#{$name}-enabled {
+    color: $normalColor;
+  }
+  .mux-button-text-outline-#{$name}-disabled {
+    color: $disabledColor;
+  }
+  .mux-button-clear-#{$name}-enabled {
+    border-color: $normalColor;
+  }
+  .mux-button-clear-#{$name}-disabled {
+    border-color: $disabledColor;
+  }
+  .mux-button-text-clear-#{$name}-enabled {
+    color: $normalColor;
+  }
+  .mux-button-text-clear-#{$name}-disabled {
+    color: $disabledColor;
+  }
+}
